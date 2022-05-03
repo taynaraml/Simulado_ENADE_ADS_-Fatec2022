@@ -1,0 +1,403 @@
+* {
+    margin:0;
+    padding: 0;
+    }
+    body {
+    background-color: rgb(232, 238, 243); /*cor*/
+    height: 100%; /*altura*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ;/*fonte*/
+    display: flex; /* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */ 
+    flex-direction: column; /* Os itens ficam em uma única coluna, um embaixo do outro. */  
+    }
+    header {
+    background-color: cornflowerblue; /*cor*/
+    margin: none; /*sem margem*/
+    height: 50px; /*altura*/
+    }
+    /*(232, 238, 243)*/
+    #logo_inep {
+        width: 100px; /*largura*/
+        -webkit-user-drag: none ;/* suporte automático, para que a imagem não seja manipulada*/
+    }
+    .botao_inicio {
+        background-color: cornflowerblue;/*cor*/
+        width: 100px; /*largura*/
+        height: 50px; /*altura*/
+        -webkit-user-drag: none; /* suporte automático, para que a imagem não seja manipulada*/
+        text-align: center; /*texto centralizado*/
+        margin-bottom: 20px; /*margem do botão*/
+        padding-bottom: 10px; /*margem interna do botão*/
+        font-size: 20px; /* tamanho fonte*/
+        vertical-align: top; /*colocar o objeto na vertical no topo*/
+        font-family: 'Times New Roman', Times, serif; /*tipo fonte*/
+        border: none;   /*borda*/
+        color: white; /*cor*/
+    }
+    
+    .botao_sobre {
+        background-color: cornflowerblue; /*cor*/
+        width: 100px; /*largura*/
+        height: 50px; /*altura*/ 
+        -webkit-user-drag: none; /* suporte automático, para que a imagem não seja manipulada*/
+        text-align: center; /*texto centralizado*/ 
+        margin-bottom: 20px; /*margem do botão*/ 
+        padding-bottom: 10px; /*margem interna do botão*/ 
+        font-size: 20px; /* tamanho fonte*/ 
+        position:-ms-page; 
+        vertical-align: top;  /*colocar o objeto na vertical no topo*/ 
+        font-family: 'Times New Roman', Times, serif; /*tipo fonte*/
+        border: none; /*borda*/
+        color: white; /*cor*/ 
+    }
+    .botao_simulado {
+        background-color: cornflowerblue; /*cor*/
+        width: 250px; /*largura*/
+        height: 50px; /*altura*/ 
+        -webkit-user-drag: none; /* suporte automático, para que a imagem não seja manipulada*/ 
+        text-align: center; /*texto centralizado*/  
+        margin-bottom: 20px; /*margem do botão*/  
+        padding-bottom: 10px; /*margem interna do botão*/ 
+        font-size: 20px; /* tamanho fonte*/  
+        position:-ms-page;
+        vertical-align: top;  /*colocar o objeto na vertical no topo*/  
+        font-family: 'Times New Roman', Times, serif; /*tipo fonte*/ 
+        border: none;   /*borda*/ 
+        color: white;  /*cor*/ 
+    }
+    .botao_simulado:hover {
+        background-color: rgb(161, 174, 216);  /*cor*/ 
+    }
+    .botao_creditos {
+        background-color: cornflowerblue;  /*cor*/
+        width: 100px; /*largura*/ 
+        height: 50px; /*altura*/  
+        -webkit-user-drag: none; /* suporte automático, para que a imagem não seja manipulada*/  
+        text-align: center; /*texto centralizado*/   
+        margin-bottom: 20px;  /*margem do botão*/ 
+        padding-bottom: 10px; /*margem interna do botão*/  
+        font-size: 20px; /* tamanho fonte*/   
+        position:-ms-page; 
+        vertical-align: top;  /*colocar o objeto na vertical no topo*/  
+        font-family: 'Times New Roman', Times, serif; /*tipo fonte*/  
+        border: none;     /*borda*/ 
+        color: white; /*cor*/
+    }
+    .botao_inicio:hover {
+        background-color: rgb(161, 174, 216);  /*cor*/
+    }
+    .botao_sobre:hover {
+        background-color: rgb(161, 174, 216);  /*cor*/ 
+    }
+    .botao_creditos:hover {
+        background-color: rgb(161, 174, 216);  /*cor*/ 
+    }
+    #logo_enade {
+        -webkit-user-drag: none; /* suporte automático, para que a imagem não seja manipulada*/   
+        text-align: center;  /*texto centralizado*/  
+        background-color: white;  /*cor*/ 
+        padding: 3px; /* margem interna que separa o conteúdo da borda de sua caixa */
+        margin: none; /* margem */ 
+        height: 100px; /*altura*/ 
+     }
+
+     #logo_enade1{
+         height: 90px; /*altura*/  
+     }
+
+     .titulo{
+        margin-top: 25px; /* margem  */ 
+        text-align: center; /*texto centralizado*/  
+        font-family: 'Times New Roman', Times, serif; /*tipo fonte*/ 
+        font-size: 25px; /* tamanho fonte*/
+        line-height: 50px; /*altura linha*/
+    
+     }
+    .barra_nav{
+        display: flex; /* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */ 
+        flex-direction: row; /* direção dos elementos do texto*/ 
+        justify-content: center; /*  alinhar os elementos ao longo do eixo principal */ 
+        align-items: center; /* alinhar itens no centro */ 
+        text-align: center; /* alinhar texto no centro */ 
+    }
+    
+    .questoes {
+        width: 100%; /*largura*/  
+    }
+    
+    .div-questoes {
+        margin-top: 25px; /* margem */  
+        display: inline-table;
+        background-color: rgb(29, 80, 124);  /*cor*/ 
+        border-radius: 15px; /* bordas arredondadas */
+        text-align: center; /*texto centralizado*/  
+        color: white;  /*cor*/ 
+        width: 25px; /*largura*/  
+        height: 23px; /*altura*/  
+        font-size: 18px; /* tamanho fonte*/ 
+        padding: 3px; /* margem interna que separa o conteúdo da borda de sua caixa */ 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/   
+    }
+    
+    #img_ques {
+        text-align: center; /*texto centralizado*/  
+        margin-top: 30px; /* margem */ 
+        line-height: 0%; /*altura da linha*/  
+   
+    }
+
+
+    
+    #img_q28 {
+        height: 500px; /*altura*/ 
+       }
+
+    
+   
+    #fonte{
+        margin-top: 20px; /* margem do topo */  
+    
+    }
+    .respostas{
+        margin-top: 70px; /* margem do topo */  
+        font-size: 21px; /* tamanho fonte*/ 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/  
+        margin-left: 200px; /* margem */  
+        margin-right: 180px; /* margem */  
+       
+    }
+    #botn{
+        text-align: center; /*texto centralizado*/  
+        margin-top: 60px; /* margem */
+        
+    }
+    .btn1{
+        padding: 15px; /* margem interna que separa o conteúdo da borda de sua caixa */ 
+        background-color: cornflowerblue; /*mudar cor de fundo*/
+        color: rgb(255, 255, 255);   /*cor*/ 
+        border-radius: 10px; /* bordas arredondadas */
+        border-color: black;  /*cor*/ 
+        font-size: 23px; /* tamanho fonte*/  
+        width: 170px; /*largura*/ 
+        margin-right: 30px; /* margem */  
+        text-align: center; /*texto centralizado*/ 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/  
+   
+    }
+    .btn2{
+        padding: 15px; /* margem interna que separa o conteúdo da borda de sua caixa */ 
+        background-color: rgb(16, 88, 223);   /*mudar cor de fundo*/
+        color: white;   /*cor*/ 
+        border-radius: 10px; /* bordas arredondadas */ 
+        border-color: black;  /*cor borda*/ 
+        font-size: 23px; /* tamanho fonte*/ 
+        width: 170px; /*largura*/ 
+        margin-right: 30px; /* margem */  
+        text-align: center; /*texto centralizado*/ 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/   
+   
+    }
+    .btn3{
+        padding: 15px; /* margem interna que separa o conteúdo da borda de sua caixa */ 
+        background-color: rgb(5, 34, 87); 
+        color: white;  /*cor*/ 
+        border-radius: 10px; /* bordas arredondadas */ 
+        border-color: black;  /*cor borda*/
+        font-size: 23px;  /* tamanho fonte*/ 
+        width: 170px; /*largura*/  
+        margin-right: 30px; /* margem */ 
+        text-align: center; /*texto centralizado*/  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/ 
+   
+    }
+    input.btn1:hover {
+        background-color: rgb(84, 80, 105);
+    }
+    input.btn2:hover {
+        background-color: rgb(84, 80, 105);
+    }
+    input.btn3:hover {
+        background-color: rgb(84, 80, 105);
+    }
+    .btn1:hover {
+        background-color: rgb(161, 174, 216); /*mudar cor de fundo*/
+    }
+    .btn2:hover {
+        background-color: rgb(161, 174, 216); /*mudar cor de fundo*/
+    }
+    .btn3:hover {
+        background-color: rgb(161, 174, 216); /*mudar cor de fundo*/
+    }
+    
+    #pop-certo {
+    display: none;
+    border-radius: 20px;
+    position: absolute;
+    /*height: 30vh;
+    width: 50vw;
+    bottom: 32%;
+    margin-left: 25vw;
+    z-index: 1;*/
+    height: 600px;
+    background-color: rgb(88, 141, 189);
+    color: white;
+    }
+    
+    #pop_errado {
+    display: none;
+    border-radius: 20px;
+    position: absolute;
+    /*height: 30vh;
+    width: 50vw;
+    bottom: 32%;
+    margin-left: 25vw;
+    z-index: 1;*/
+    height: 600px;
+    background-color: rgb(93, 147, 196);
+    color: white;
+    }
+    
+    .op_ec {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    }
+    
+    .img_pop {
+    text-align: center;
+    margin-top: 1rem;
+    }
+    
+    .texto_pop {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    }
+    
+    .close_pop {
+    text-align: right;
+    background-color: rgb(0, 73, 136);
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    }
+    
+    @media (max-width: 1580px) {
+    #pop_certo {
+        display: none;
+        border-radius: 20px;
+        position: static;
+        /*height: 38vh;
+        width: 50vw;
+        bottom: 32%;
+        margin-left: 25vw;
+        z-index: 1;*/
+        height: 380px;
+        margin-left: 350px;
+        margin-right: 350px;
+        background-color: rgb(56, 156, 223);
+        color: white;
+    }
+    
+    #pop_errado {
+        display: none;
+        border-radius: 20px;
+        position:static;
+        /*height: 38vh;
+        width: 50vw;
+        bottom: 32%;
+        margin-left: 25vw;
+        z-index: 1;*/
+        height: 380px;
+        margin-left: 350px;
+        margin-right: 350px;
+        background-color: rgb(56, 156, 223);
+        color: white;
+    }
+}
+     
+    li {
+        padding: 5px;/*define a distancia entre o conteúdo de um elemento e suas bordas*/
+        text-align: justify;/*texto justificado*/
+    }
+
+    ul{
+        list-style-type: none; /* tirar as bolinhas de lsta*/
+}
+   
+.sc_butn{
+    font-family: 'Times New Roman', Times, serif;/*fonte*/
+    text-align: center;/*texto centralizado*/
+    margin-top: 70px ;/*margem superior*/
+    font-size: 17px;/*tamanho da fonte*/
+    line-height: 50px;/*altura da linha*/
+    background-color:cornflowerblue;/*cor*/
+    width: 100%;/*largura*/
+    height: 35px;/*altura*/
+  
+   
+}
+
+.sc{
+    padding: 10px;/*preenchimento*/
+    color: rgb(15, 15, 15);/*cor*/
+    font-size: 20px;/*tamanho da fonte*/
+    width: 120px;/*largura*/
+    margin-top: 30px;/*margem superior*/
+
+    
+    text-align: center;/*alinhamento do texto*/
+    font-family:'Times New Roman', Times, serif/*fonte*/
+}
+
+#logo_fatec{
+    text-align: center;/*alinhamento do texto*/
+    margin-right: 80px;
+    margin-top: 15px;/*margem superior*/
+    height: 80px;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+#logo_cps{
+    height: 90px;
+    margin-top: 10px;/*margem superior*/
+    margin-right: 90px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#rod_inep{
+    height: 60px;
+    margin-top: 15px;/*margem superior*/
+    margin-right: 50px;
+    vertical-align: top;
+}
+
+#logo_ads{
+    height: 95px;
+    margin-top: 15px;/*margem superior*/
+    margin-right: 90px;
+ vertical-align: top;
+ text-decoration: none;
+}
+footer {
+    background-color: cornflowerblue;/*cor*/
+    margin: none;/*sem margem*/
+    height: 156px;/*altura*/
+   
+    font-family: 'Times New Roman', Times, serif;/*fonte*/
+    text-align: center;/*texto centralizado*/
+    font-size: 13px;/*tamanho da fonte*/
+   
+    }
+    #cs{
+        color:rgb(14, 32, 134);/*cor*/
+    }
+    footer a {
+        color: black;/*cor*/
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/*fonte*/
+    
+    }

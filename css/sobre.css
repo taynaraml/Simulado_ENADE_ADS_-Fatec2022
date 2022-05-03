@@ -1,0 +1,242 @@
+* {
+    margin:0;/*margem*/
+    padding: 0;/*preenchimento*/
+    }
+body {
+    background-color: rgb(232, 238, 243);/*cor*/
+    height: 100%;/*altura*/
+    margin: 0;/*margem*/
+    padding: 0;/*preenchimento*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ;/*fonte*/
+}
+header {
+    background-color: cornflowerblue;/*cor*/
+    margin: none;/*sem margem*/
+    height: 50px;/*altura*/
+}
+  
+#logo_inep {
+        width: 100px;/*largura*/
+        -webkit-user-drag: none ;/* suporte automático, para que a imagem não seja manipulada*/
+}
+.botao_inicio {
+        background-color: cornflowerblue;/*cor*/
+        width: 100px;/*largura*/
+        height: 50px;/*altura*/
+        -webkit-user-drag: none;/* suporte automático, para que a imagem não seja manipulada*/
+        text-align: center;/*texto centralizado*/
+        margin-bottom: 20px;/*margem do botão*/
+        padding-bottom: 10px;/*margem interna do botão*/
+        font-size: 20px;/*tamanho da fonte*/
+        vertical-align: top;/*colocar o objeto na vertical no topo*/
+        font-family: 'Times New Roman', Times, serif;/*fonte*/
+        border: none;/*borda*/
+        color: white;/*cor*/
+}
+.botao_sobre {
+        background-color: cornflowerblue;/*cor*/
+        width: 100px;/*largura*/
+        height: 50px;/*altura*/
+        -webkit-user-drag: none;/* suporte automático, para que a imagem não seja manipulada*/
+        text-align: center;/*texto centralizado*/
+        margin-bottom: 20px;/*margem do botão*/
+        padding-bottom: 10px;/*margem interna do botão*/
+        font-size: 20px;/*tamanho da fonte*/
+        position:-ms-page;/*posição*/
+        vertical-align: top;/*colocar o objeto na vertical no topo*/
+        font-family: 'Times New Roman', Times, serif;/*fonte*/
+        border: none;/*borda*/
+        color: white;/*cor*/
+}
+.botao_simulado {
+        background-color: cornflowerblue;/*cor*/
+        width: 250px;/*largura*/
+        height: 50px;/*altura*/
+        -webkit-user-drag: none;/* suporte automático, para que a imagem não seja manipulada*/
+        text-align: center;/*texto centralizado*/
+        margin-bottom: 20px;/*margem do botão*/
+        padding-bottom: 10px;/*margem interna do botão*/
+        font-size: 20px;/*tamanho da fonte*/
+        position:-ms-page;/*posição*/
+        vertical-align: top;/*colocar o objeto na vertical no topo*/
+        font-family: 'Times New Roman', Times, serif;/*fonte*/
+        border: none;/*borda*/  
+        color: white;/*cor*/
+}
+.botao_simulado:hover {
+        background-color: rgb(161, 174, 216);/*cor*/
+}
+.botao_creditos {
+        background-color: cornflowerblue;/*cor*/
+        width: 100px;/*largura*/
+        height: 50px;/*altura*/
+        -webkit-user-drag: none;/* suporte automático, para que a imagem não seja manipulada*/
+        text-align: center;/*texto centralizado*/
+        margin-bottom: 20px;/*margem do botão*/
+        padding-bottom: 10px;/*margem interna do botão*/
+        font-size: 20px;/*tamanho da fonte*/
+        position:-ms-page;/*posição*/
+        vertical-align: top;/*colocar o objeto na vertical no topo*/
+        font-family: 'Times New Roman', Times, serif;/*fonte*/
+        border: none;/*borda*/
+        color: white;/*cor*/
+}
+.botao_inicio:hover {
+        background-color: rgb(161, 174, 216);/*cor*/
+}
+.botao_sobre:hover {
+        background-color: rgb(161, 174, 216);/*cor*/
+}
+.botao_creditos:hover {
+        background-color: rgb(161, 174, 216);/*cor*/
+}
+
+h1{
+        text-align: center;/*texto centralizado*/
+        font-family: 'Times New Roman', Times, serif;/*fonte*/
+        font-size: 35px;/*tamanho da fonte*/
+        margin-top: 70px;/*margem superior*/
+    
+
+}
+
+.titulo_sobre {
+        background-color: cornflowerblue;/*cor*/
+        width: 280px;/*largura*/
+        margin: auto;/*margem*/
+        padding: 8px;/*preenchimento*/
+       font-size: 20px ;/*tamanho da fonte*/
+       text-align: center;/*texto centralizado*/
+       border-radius: 00px 0px 20px 20px;/*raio da borda*/
+       
+}
+.sobre {
+        text-align: justify;/*alinhamento do texto*/
+        margin-top: 50px;/*margem superior*/
+        font-size: 22px;/*tamanho da fonte*/
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;/*fonte*/
+        background-color: white;/*cor*/
+        border-radius: 15px;/*raio da borda*/
+        padding: 20px;/*preenchimento*/
+        margin-left: 150px;/*margem esquerda*/
+        margin-right: 150px;/*margem direita*/
+        height: 1000px;/*altura*/
+           
+}
+
+#ads_tex{
+        text-decoration: none; /*tirar a marcação de baixo do texto que está com link*/
+        color:black;/*cor*/
+}
+
+.titulo {
+        text-align: center;/*texto centralizado*/
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/*fonte*/
+        font-size: 27px;/*tamanho da fonte*/
+       
+
+    
+}
+.autores {
+        text-align: center;/*texto centralizado*/
+        font-style: italic;/*estilo de fonte*/
+        font-size: 23px;/*tamanho da fonte*/
+        padding: none;/*preenchimento*/
+}
+
+.sc_butn{
+        font-family: 'Times New Roman', Times, serif;/*fonte*/
+        text-align: center;/*texto centralizado*/
+        margin-top: 70px ;/*margem superior*/
+        font-size: 17px;/*tamanho da fonte*/
+        line-height: 50px;/*altura da linha*/
+        background-color:cornflowerblue;/*cor*/
+        width: 100%;/*largura*/
+        height: 30px;/*altura*/
+      
+       
+}
+
+.sc{
+        padding: 10px;/*preenchimento*/
+        color: rgb(15, 15, 15);/*cor*/
+        font-size: 20px;/*tamanho da fonte*/
+        width: 120px;/*largura*/
+        margin-top: 30px;/*margem superior*/
+    
+        
+        text-align: center;/*alinhamento do texto*/
+        font-family:'Times New Roman', Times, serif/*fonte*/
+}
+
+#logo_fatec{
+        text-align: center;/*alinhamento do texto*/
+        margin-right: 80px;
+        margin-top: 15px;/*margem superior*/
+        height: 80px;
+        vertical-align: top;
+        text-decoration: none;
+}
+
+#logo_cps{
+        height: 90px;
+        margin-top: 10px;/*margem superior*/
+        margin-right: 90px;
+        text-align: center;
+        text-decoration: none;
+}
+
+#rod_inep{
+        height: 60px;
+        margin-top: 15px;/*margem superior*/
+        margin-right: 50px;
+        vertical-align: top;
+}
+
+#logo_ads{
+        height: 95px;
+        margin-top: 15px;/*margem superior*/
+        margin-right: 90px;
+     vertical-align: top;
+     text-decoration: none;
+}
+/*
+#ads_text{
+
+        margin-top: 10px;
+        text-align: center;
+        line-height: none;
+      vertical-align: top;
+      margin-right: 70px;
+      font-size: 60px;
+      color: rgb(173, 16, 16);
+}*/
+
+
+
+
+footer {
+ background-color: cornflowerblue;/*cor*/
+ margin: none;/*sem margem*/
+ height: 156px;/*altura*/
+
+ font-family: 'Times New Roman', Times, serif;/*fonte*/
+ text-align: center;/*texto centralizado*/
+ font-size: 13px;/*tamanho da fonte*/
+
+ }
+ #cs{
+     color:rgb(14, 32, 134);/*cor*/
+ }
+ footer a {
+     color: black;/*cor*/
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/*fonte*/
+ 
+ }
+/* flex-shrink: 0;
+    bottom:0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+Códigos para manter o footer no fim da pagina, caso necessário*/   

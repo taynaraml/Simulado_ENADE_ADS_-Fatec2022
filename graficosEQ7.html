@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+	<link rel="icon"  type="imagem/png" href="img/icone_enade.ico" /> <!--tag link usada para colocar o ícone-->
+    <link rel="stylesheet" type="text/css" href="css/graficos.css"> <!--tag link usada para se conectar com o css-->
+	<title>Graficos</title>
+<head>
+	<style type="text/css">
+		lateral {
+		  width: 100%;
+		   font-style: italic;
+		  background-color: lightgray;
+		}
+	</style >
+
+	<!---<style type="text/css">
+		grafico {
+
+		text-align: center;
+			margin-left: 1050px;
+			margin-right: 50px;
+			margin-top: 200px;
+			max-width: 10px;
+	width: 20%;
+	height: 20px;
+
+		}
+	</style>
+	--->
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Programacao Orientada a Objetos-A205-N-ANALISE E DESENV. DE SISTEMAS-143-20221 Members</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">59;#Programacao Orientada a Objetos-A205-N-ANALISE E DESENV. DE SISTEMAS-143-20221 Members</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+	<header>
+        <img id="logo_inep" src="img/inep_logo.png" alt="Logo Inep" draggable="false">
+        <!--tag img para anexar imagens-->
+        <a href="index.html"><button class="botao_inicio">HOME</button></a><!--tag a para lincar outra pagina/ tag button para botao -->
+        <a href="sobre.html"> <button class="botao_sobre">SOBRE</button></a><!--tag a para lincar outra pagina/ tag button para botao -->
+        <a href="instrucoes.html"><button class="botao_simulado">INICIAR SIMULADO</button></a><!--tag a para lincar outra pagina/ tag button para botao -->
+        <a href="creditos.html"><button class="botao_creditos">CRÉDITOS</button></a><!--tag a para lincar outra pagina/ tag button para botao -->
+      
+     </header> <!--tag header criada para o cabeçalho-->
+	 <h1>Graficos</h1><!--tag h1 usada para formatar o tamanho do título-->
+     <nav class="titulo_grafico"></nav><!--tag nav usada para apontar para outras páginas ou para outras áreas da página-->
+
+
+
+
+<script >
+var  allQuestions = [
+[1,'C',[11.3,22.6,28.3,28.3,7.5]],
+[2,'C',[9.4,5.7,54.7,11.3,18.9]],
+[3,'B',[32.1,24.5,24.5,11.3,7.5]],
+[4,'B',[3.8,69.8,0,18.9,7.5]],
+[5,'C',[0,9.4,49.1,13.2,28.3]],
+[6,'E',[0,3.8,0,7.5,88.7]],
+[7,'A',[24.5,17,13.2,24.5,20.8]],
+[8,'D',[5.7,7.5,9.4,43.4,34]],
+[9,'B',[17,37.7,15.1,15.1,15.1]],
+[10,'C',[17,11.3,45.3,17,9.4]],
+[11,'C',[9.4,3.8,67.9,11.3,7.5]],
+[12,'D',[9.4,9.4,17,62.3,1.9]],
+[13,'C',[28.3,28.3,26.4,11.3,5.7]],
+[14,'C',[0,15.1,26.4,28.3,30.2]],
+[15,'ANULADA',[,,,,]],
+[16,'A',[32.1,11.3,28.3,7.5,18.9]],
+[17,'D',[15.1,11.3,13.2,35.8,24.5]],
+[18,'A',[73.6,7.5,9.4,0,9.4]],
+[19,'C',[0,3,87.9,9.1,0]],
+[20,'E',[7.5,3.8,17,20.8,50.9]],
+[21,'D',[0,26.4,9.4,39.6,24.5]],
+[22,'B',[36.4,51.5,6.1,6.1,0]],
+[23,'B',[1.9,54.7,15.1,5.7,22.6]],
+[24,'E',[28,4.3,13,4.3,45.7]],
+[25,'A',[67.4,23.9,0,2.2,0]],
+[26,'A',[26.4,18.9,28.3,26.4,0]],
+[27,'D',[52.8,7.5,15.1,22.6,1.9]],
+[28,'E',[9.4,15.1,5.7,3.8,66]],
+[29,'D',[19.6,2.2,2.2,71.7,2.2]],
+[30,'A',[26.4,20.8,35.8,9.4,5.7]],
+[31,'B',[9.4,26.4,18.9,22.6,22.6]],
+[32,'C',[26.4,5.7,32.1,22.6,13.2]],
+[33,'D',[11,0,0,76.1,13]],
+[34,'B',[18.9,45.3,13.2,17,5.7]],
+[35,'C',[7.5,17,26.4,15.1,34]],
+]
+function drawResponses(question, answer, valuesAnswers) {
+	var xArray = ["A", "B", "C", "D", "E"];
+	var yArray = valuesAnswers;
+
+	var layout = {title:"<b>QUESTÃO " + question + "</b>"};
+
+	
+
+
+	var data = [{labels:xArray, values:yArray, type:"pie"}];
+	//var data = [{x:xArray, y:yArray, type:"bar"}];
+
+	var divQuestion = "Question" + question;
+	
+	document.write('<table><tr><td>');
+		document.write('<div id="' + divQuestion + '" style="width:70%;max-width:400px,"></div>');
+	document.write('</td><td>');
+    document.write('<lateral><h2><center>Resposta: '+answer+'</center></h2></lateral>');
+	document.write('</td></tr></table>');
+	
+	Plotly.newPlot(divQuestion, data, layout); 
+}
+for (let i = 0; i < allQuestions.length; i++) {
+  drawResponses(allQuestions[i][0], allQuestions[i][1], allQuestions[i][2]);
+}
+</script>
+
+<!-- Code injected by live-server -->
+<script  type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<a href="resultado.html"><button class="btn1" >VOLTAR PARA RESULTADOS</button></a>
+
+
+<div class="sc_butn">
+	<a href="sobre.html" class="sc">SOBRE</a><!--tag a para lincar outra pagina/ tag button para botao -->
+	<a href="creditos.html" class="sc">CRÉDITOS</a><!--tag a para lincar outra pagina/ tag button para botao -->
+</div>
+
+<footer>
+	<h2> <br> <a href="http://www.fateccarapicuiba.edu.br/" target="blank" ><img id="logo_fatec" src="img/logo_fatec.png" alt="Logo Fatec"></a> 
+		 <a   href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" 
+		target="blank"> <img id="logo_ads" src="img/logo_ads.png" alt="logo_ads"></a>  <!--tag h2 para formatar tamanho do texto, tag br para quebrar/pular uma linha, tag a para linkar outra página e tag b para texto em negrito-->
+
+		<a href="https://www.cps.sp.gov.br" target="blank"  > <img id="logo_cps" src="img/cps.png" alt="logo_cps"></a>
+
+  <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade"
+	target="blank"> <img id="rod_inep" src="img/inep_logo.png" alt="logo_inep"> <br> <br> </a> 
+	
+   
+</h2>
+</footer><!--tag footer criada para o rodapé-->
+
+
+</body>
+</html>
