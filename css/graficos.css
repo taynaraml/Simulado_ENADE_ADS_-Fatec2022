@@ -122,15 +122,41 @@ h1{
         margin-right: 30px;/*tamanho da margem direita*/
         text-align: center;/*texto centralizado*/
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/
-        margin-top: 130px;/*distancia da margem superior*/
+        margin-top: 90px;/*distancia da margem superior*/
         margin-left: 510PX;
     }
 
 
+#corpo1{
+    margin-top: 60px;
+    background-color: rgb(182, 203, 236);
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+   
+}
 
+p{
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: justify;
+    background-color: rgb(202, 211, 216);
+    border-radius: 10px;
+    padding: 20px;
+  
+  
 
+}
 
-
+h3{
+    margin-top: 17px;
+    font-size: 15px;/*tamanho da fonte*/
+    font-style: italic;/*estilo da fonte*/
+    text-align: center;/*alinhamento do texto*/
+}
 
 
 

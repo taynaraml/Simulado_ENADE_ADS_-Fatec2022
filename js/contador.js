@@ -97,22 +97,75 @@ function resultado() { // Está função e a parte do contador que mostrará o r
 
     quebrar = sessionStorage.getItem("respostas").split(" ") // Variavel quebra ira receber o sessionStorage quebrando ela em espaços com o split()
     corretas = 0; // Variavel para o contador
+    erradas = 0;
+    realizou= 0;
 
-
+    
+    
     for(c = 0; c < quebrar.length; c++) { // aqui vai percorrer o sessionStorage
         if(gabarito.indexOf(quebrar[c]) > - 1) { // IndexOf retorna 0 caso encontre e -1 caso não encontre, então isso quer dizer que pra cada vez q retornar o valor 0 o a variavel corretas ira receber +1, dizendo que vc acertou a questão
-            corretas++;
+            corretas++; realizou++;
+        }  else {
+            erradas++; realizou++;
         }
+        
+
     }
     console.log(corretas) // Linha para testes
+
+    document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas} / 34` // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
+
+    console.log(erradas) // Linha para testes
     
 
 
-    document.getElementById("acertos").innerHTML = `Você acertou: ${corretas} / 34` // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    document.getElementById("erros").innerHTML = `Seus erros: ${erradas} / 34` // Aqui ira apresentar o resultado mostrando a quantidade de acertos
     // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
+
+   document.getElementById("realizou").innerHTML = `Questões respondidas: ${realizou} / 34` // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}` 
+   
 }
 
+
 function reset() { // Função feita para resetar o sessionStorage para começar novamente o quiz
-    sessionStorage.clear()
+    sessionStorage.c
 }
+
+    google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+var gabarito = []
+var acertos = []
+var erros = []
+
+function teste(){
+    alert("foiiiiiiii!")
+}
+
+function drawChart() {
+
+    /* Grafico de acertos e erros em porcentagem. */
+
+    var dados = new google.visualization.DataTable();
+    dados.addColumn('string', 'Acertos e erros');
+    dados.addColumn('number', 'Quantidade de acertos e erros');
+    dados.addRows([
+        ['Erros', corretas],
+        ['Acertos', erradas]
+    ]);
+
+    var configuracoes = {
+        'title':'Acertos e erros em porcentagem', 
+        'pieHole': 0.4,
+        'colors': ['#6495ED', '#1E90FF'],
+    };
+
+    var grafico = new google.visualization.PieChart(document.getElementById('grafico_AcertoErro_per'))
+    grafico.draw(dados, configuracoes);
+
+}
+
+
 

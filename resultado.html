@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"  type="imagem/png" href="img/icone_enade.ico" /> <!--tag link usada para colocar o ícone-->
     <link rel="stylesheet" type="text/css" href="css/resultado.css"> <!--tag link usada para se conectar com o css-->
-    
+    <script src="js/graficoae.js" type="text/javascript"></script>
     <script src="js/funcoes.js" type="text/javascript"></script>
     <script src="js/contador.js" defer type="text/javascript"></script>
     <title>Resultado</title>
@@ -22,20 +22,41 @@
       
      </header> <!--tag header criada para o cabeçalho-->
 
+     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    </script>
+
      <h1>Resultado</h1><!--tag h1 usada para formatar o tamanho do título-->
      <nav class="titulo_sobre"></nav><!--tag nav usada para apontar para outras páginas ou para outras áreas da página-->
      
+     <div class="texto">
+        <p>Parabéns, você finalizou o simulado!!!  </p>
+     </div>
+
+     <img class="img_cert" src="img/icone1.png" alt="">
+
      <div class="conteudo">
         <div id="mostrarResultado">
-            <p id="acertos">Número de Acertos: 0/34</p>
+            <p id="acertos">  Número de Acertos: 0/34  </p>
+            <p id="erros">   Número de Erros: 0/34</p>
+            <p id="realizou">   Número de feitos: 0/34</p>
         </div>
-        
+    </div>
+    
+    <Div Class = "graficos">
+        <!-- Grafico responsavel por mostrar total de acertos e erros em %. -->
+        <Div Style = "width:400; height:600; margin-top: 70px; margin-left: 300px;
+        margin-right: 300px; padding: 20px; background-color:cadetblue;" Id = "grafico_AcertoErro_per"></Div>
+        <Script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></Script>
+
         <div id="botn">
 
             <a href="Q1A_EQ7.html"><button class="btn1" >REALIZAR NOVAMENTE</button></a>
             <a href="index.html"><button class="btn2" >PÁGINA INICIAL</button></a>
-            <a href="graficosEQ7.html"><button class="btn3" >GRÁFICOS</button></a>
-
+            <a href="graficosEQ7.html"><button class="btn3" >ESTATÍSTICA</button></a>
+           
         <!--div criada para colocar os botoes-->
     </div>
 

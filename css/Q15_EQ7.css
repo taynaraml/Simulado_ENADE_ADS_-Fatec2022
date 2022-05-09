@@ -179,19 +179,7 @@ margin-top: 20px;
         margin-top: 60px; /* margem */
         
     }
-    .btn1{
-        padding: 15px; /* margem interna que separa o conteúdo da borda de sua caixa */ 
-        background-color: cornflowerblue; /*mudar cor de fundo*/
-        color: rgb(255, 255, 255);   /*cor*/ 
-        border-radius: 10px; /* bordas arredondadas */
-        border-color: black;  /*cor*/ 
-        font-size: 23px; /* tamanho fonte*/  
-        width: 170px; /*largura*/ 
-        margin-right: 30px; /* margem */  
-        text-align: center; /*texto centralizado*/ 
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*tipo fonte*/  
-   
-    }
+    
     .btn2{
         padding: 15px; /* margem interna que separa o conteúdo da borda de sua caixa */ 
         background-color: rgb(16, 88, 223);   /*mudar cor de fundo*/

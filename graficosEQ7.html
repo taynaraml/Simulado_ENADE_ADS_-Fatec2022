@@ -2,30 +2,19 @@
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 	<link rel="icon"  type="imagem/png" href="img/icone_enade.ico" /> <!--tag link usada para colocar o ícone-->
     <link rel="stylesheet" type="text/css" href="css/graficos.css"> <!--tag link usada para se conectar com o css-->
-	<title>Graficos</title>
+	<title>Estatística</title>
 <head>
 	<style type="text/css">
 		lateral {
-		  width: 100%;
-		   font-style: italic;
-		  background-color: lightgray;
+		
+		margin:auto;
+		 text-align: center;	
+		 font-style: italic;
+	
 		}
 	</style >
 
-	<!---<style type="text/css">
-		grafico {
-
-		text-align: center;
-			margin-left: 1050px;
-			margin-right: 50px;
-			margin-top: 200px;
-			max-width: 10px;
-	width: 20%;
-	height: 20px;
-
-		}
-	</style>
-	--->
+	
 
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
@@ -45,11 +34,19 @@
         <a href="creditos.html"><button class="botao_creditos">CRÉDITOS</button></a><!--tag a para lincar outra pagina/ tag button para botao -->
       
      </header> <!--tag header criada para o cabeçalho-->
-	 <h1>Graficos</h1><!--tag h1 usada para formatar o tamanho do título-->
+	 <h1>Estatística</h1><!--tag h1 usada para formatar o tamanho do título-->
      <nav class="titulo_grafico"></nav><!--tag nav usada para apontar para outras páginas ou para outras áreas da página-->
 
 
+<p> Logo a baixo então os gráficos referentes as estatisticas da Prova do ENADE-ADS 2017, contendo a porcentagem de 
+	cada alternativa escolhida, tornando assim possível uma análise do desempenho dos candidatos que realizaram a prova.
+	<br>
+Após rolarem toda a página encontraram um botão <B>VOLTAR PARA RESULTADOS</B> onde poderam vizualizar o resultado 
+	do simulado novamente. </p>
 
+
+
+<div id="corpo1">
 
 <script >
 var  allQuestions = [
@@ -102,12 +99,17 @@ function drawResponses(question, answer, valuesAnswers) {
 	//var data = [{x:xArray, y:yArray, type:"bar"}];
 
 	var divQuestion = "Question" + question;
+
 	
+	document.write('<td>')
+	document.write('<td><lateral><h2><center>Resposta Correta: '+answer+'</center></h2></lateral>');
+	document.write('</td>');
 	document.write('<table><tr><td>');
-		document.write('<div id="' + divQuestion + '" style="width:70%;max-width:400px,"></div>');
-	document.write('</td><td>');
-    document.write('<lateral><h2><center>Resposta: '+answer+'</center></h2></lateral>');
-	document.write('</td></tr></table>');
+	document.write('<div id="' + divQuestion + '" style="width:600px;max-width:400px; margin-left:330px; margin-top:30px"></div>');
+	document.write('</td> </tr></table> ');
+	document.write('</td>')
+
+    //
 	
 	Plotly.newPlot(divQuestion, data, layout); 
 }
@@ -154,6 +156,10 @@ for (let i = 0; i < allQuestions.length; i++) {
 	}
 	// ]]>
 </script>
+</div>
+
+<h3> Fonte:  https://enade.inep.gov.br/enade/#!/relatorioCursos <br>
+*Questões 19, 22, 24, 25, 29 e 33 Fonte: Dados ficticios</h3>
 
 <a href="resultado.html"><button class="btn1" >VOLTAR PARA RESULTADOS</button></a>
 

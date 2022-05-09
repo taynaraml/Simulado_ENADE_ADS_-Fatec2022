@@ -1,6 +1,7 @@
 * {
-    margin:0;/*margem*/
+    margin:auto;/*margem*/
     padding: 0;/*preenchimento*/
+
     }
 body {
     background-color: rgb(232, 238, 243);/*cor*/
@@ -111,17 +112,62 @@ h1{
    
 }
 
-#acertos{
-
+.texto{
+    
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
+
+}
+
+.img_cert{
+    height: 250px;
+    text-align: center;
+    margin-left: 570px;
+    margin-top: 20px;
+}
+
+
+
+#acertos{
+
+    font-family:'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#erros{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#realizou{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.conteudo{
+    background-color:rgb(174, 205, 206);
+    margin-right: 280px;
+    margin-left:280px ;
+    border-radius: 15px;
+    color: rgb(9, 43, 94);
+  
 }
 
 #botn{
     text-align: center;/*texto centralizado*/
-    margin-top: 130px;/*distancia da margem superior*/
+    margin-top: 90px;/*distancia da margem superior*/
+    padding: 15px;
+  
     
     
 }
@@ -199,7 +245,7 @@ input.btn3:hover {
 .confira_enade {
     font-family: 'Times New Roman', Times, serif;/*fonte*/
     text-align: center;/*texto centralizado*/
-    margin-top: 150px ;/*margem superior*/
+    margin-top: 100px ;/*margem superior*/
     font-size: 17px;/*tamanho da fonte*/
     line-height: 50px;/*altura da linha*/
     border-radius: 20px;/*raio da borda*/
@@ -207,6 +253,7 @@ input.btn3:hover {
     width: 600px;/*largura*/
     height: 210px;/*altura*/
     margin-left: 380px;/*margem da esquerda*/
+ 
    
 }
 .botao_prova {
@@ -237,6 +284,7 @@ input.btn3:hover {
       text-align: center;/*alinhamento do texto*/
       margin-left: 17px;/*margem esquerda*/
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/*fonte*/
+  
   }
   .botao_gabarito:hover {
       background-color: rgb(161, 174, 216);/*cor*/
